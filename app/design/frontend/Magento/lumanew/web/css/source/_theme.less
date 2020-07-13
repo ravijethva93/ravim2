@@ -1,0 +1,73 @@
+
+//Spacing Var
+@indent__xxl:50px;
+
+ 
+// Display Flex
+.adorn-prefix-display(
+    @_value: flex,
+    @_flex-wrap:wrap,
+    @_align-items:center,
+    @_justify-content:space-between,
+) {
+    display: ~"-webkit-@{_value}";
+    display: ~"-ms-@{_value}box";
+    display: @_value;
+    flex-wrap:@_flex-wrap;
+    align-items: @_align-items;
+    justify-content: @_justify-content;
+}
+
+/* = custom icon sprite
+========================================================================================*/
+.sprites(
+    @_url: '@{baseDir}/images/sprites.png',
+){
+    background-image:url(@_url);
+}
+.sp-after(
+    @_content:'',
+    @_url: '@{baseDir}images/sprites.png',
+    @_display:inline-block,
+    @_sp-width:25px,
+    @_sp-height:25px,
+    @_sp-margin:0 0 0 @indent__s,
+    @_sp-align:middle,
+){
+    &:after{
+        content:@_content; 
+        background-image:url(@_url);
+        display: @_display;
+        width: @_sp-width;
+        height: @_sp-height;
+        margin: @_sp-margin;
+        vertical-align: @_sp-align;
+    }
+}
+.sp-before(
+    @_content:'',
+    @_url: '@{baseDir}images/sprites.png',
+    @_display:inline-block,
+    @_sp-width:25px,
+    @_sp-height:25px,
+    @_sp-margin:0 @indent__s 0 0,
+    @_sp-align:middle,
+){
+    &:before{
+        content:@_content; 
+        background-image:url(@_url);
+        display: @_display;
+        width: @_sp-width;
+        height: @_sp-height;
+        margin: @_sp-margin;
+        vertical-align: @_sp-align;
+    }
+}
+
+
+@button-primary__background: green;
+@button-primary__border: 1px solid green;
+@button__border-radius : 4px;
+@gray-color20 : #f4f4f4;
+@link__color :#575757;
+@link__hover__color :#575757;

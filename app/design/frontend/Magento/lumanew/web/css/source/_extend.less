@@ -1,0 +1,22 @@
+// /**
+//  * Copyright © Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Extend fallback
+//  _____________________________________________
+
+//  Magento extend fallback handling. Should be EMPTY.
+
+//
+//  Primary button
+//  ---------------------------------------------
+
+& when (@media-common = true) {
+    .action-primary {
+        .lib-button-primary();
+        .lib-css(border-radius, @button__border-radius);
+        border-radius:@button__border-radius;
+    }
+}
